@@ -35,7 +35,7 @@ public class Tests extends BaseTest {
 	new checkoutPage(driver).clickFinish();
 	String str = new completePage(driver).getHeaderText();
 	new completePage(driver).clickbackToProducts();
-	Assert.assertEquals(str, "Thank you for your order!");
+	Assert.assertEquals(str, "Thank you for your order!");  //assertion added
 	}
 
 }
