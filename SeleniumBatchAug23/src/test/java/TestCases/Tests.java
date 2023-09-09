@@ -26,7 +26,7 @@ public class Tests extends BaseTest {
 	new loginPage(driver).enterUsername(new ReadConfig().getUsername());
 	new loginPage(driver).enterpassword(new ReadConfig().getPassword());
 	new loginPage(driver).clickLogin();
-	String price = new productsPage(driver).getBackPackPrice(); // price
+	String price = new productsPage(driver).getBackPackPrice(); 
 	Assert.assertEquals(price, new ReadConfig().getPrice());
 	new productsPage(driver).clickBackPack();
 	new productsDetailsPage(driver).clickAddToCart();
@@ -35,7 +35,7 @@ public class Tests extends BaseTest {
 	new checkoutPage(driver).clickFinish();
 	String str = new completePage(driver).getHeaderText();
 	new completePage(driver).clickbackToProducts();
-	Assert.assertEquals(str, "Thank you for your order!");  //assertion added
+	Assert.assertEquals(str, "Thank you for your order!");  
 	}
 
 }
